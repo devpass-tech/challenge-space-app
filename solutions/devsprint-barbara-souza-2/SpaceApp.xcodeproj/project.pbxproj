@@ -26,6 +26,8 @@
 		98B096E027D2B1D70038709C /* FullDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B096CE27D2B1D70038709C /* FullDescriptionView.swift */; };
 		98B096E127D2B1D70038709C /* FullDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B096CF27D2B1D70038709C /* FullDescriptionViewController.swift */; };
 		98B096E227D2B1D70038709C /* SpaceXService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B096D127D2B1D70038709C /* SpaceXService.swift */; };
+		9F7396D927DFF3A600CA5092 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7396D827DFF3A600CA5092 /* Colors.swift */; };
+		9F85EE9327DF978F0007A365 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F85EE9227DF978F0007A365 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		98B096CE27D2B1D70038709C /* FullDescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullDescriptionView.swift; sourceTree = "<group>"; };
 		98B096CF27D2B1D70038709C /* FullDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullDescriptionViewController.swift; sourceTree = "<group>"; };
 		98B096D127D2B1D70038709C /* SpaceXService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceXService.swift; sourceTree = "<group>"; };
+		9F7396D827DFF3A600CA5092 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		9F85EE9227DF978F0007A365 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 		98B096B327D2A7170038709C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9F85EE9427DF98F30007A365 /* Colors */,
 				98B0968C27D2A3460038709C /* Assets.xcassets */,
 				98B0968E27D2A3460038709C /* LaunchScreen.storyboard */,
 				98B0969127D2A3460038709C /* Info.plist */,
@@ -251,6 +256,15 @@
 				98B096D127D2B1D70038709C /* SpaceXService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		9F85EE9427DF98F30007A365 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				9F85EE9227DF978F0007A365 /* Colors.xcassets */,
+				9F7396D827DFF3A600CA5092 /* Colors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F85EE9327DF978F0007A365 /* Colors.xcassets in Resources */,
 				98B0969027D2A3460038709C /* LaunchScreen.storyboard in Resources */,
 				98B0968D27D2A3460038709C /* Assets.xcassets in Resources */,
 			);
@@ -384,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B096E227D2B1D70038709C /* SpaceXService.swift in Sources */,
+				9F7396D927DFF3A600CA5092 /* Colors.swift in Sources */,
 				98B0968427D2A3420038709C /* AppDelegate.swift in Sources */,
 				98B0968627D2A3420038709C /* SceneDelegate.swift in Sources */,
 				98B096D927D2B1D70038709C /* RocketDetailsView.swift in Sources */,
@@ -571,8 +587,10 @@
 				INFOPLIST_FILE = SpaceApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -598,8 +616,10 @@
 				INFOPLIST_FILE = SpaceApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

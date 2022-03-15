@@ -16,7 +16,7 @@ final class NextLaunchesView: UIView {
         static let titleLabel: CGFloat = 24
         static let infoLabel: CGFloat = 20
         static let infoColor: UIColor = UIColor(red: 0.56, green: 0.56, blue: 0.58, alpha: 1.00)
-        static let backgroundCardColor: UIColor = UIColor(red: 0.11, green: 0.11, blue: 0.12, alpha: 1.00)
+        static let backgroundCardColor: UIColor = .black
         static let cornerRadiusIcon: CGFloat = 10
     }
     
@@ -88,8 +88,6 @@ final class NextLaunchesView: UIView {
         stackView.alignment = .fill
         stackView.distribution = .fill
         stackView.spacing = Configurations.contentBadgeStackViewSpacing
-        stackView.isLayoutMarginsRelativeArrangement = true
-        stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0)
         stackView.addArrangedSubview(launchBadge)
         stackView.addArrangedSubview(contentInfoStackView)
         return stackView

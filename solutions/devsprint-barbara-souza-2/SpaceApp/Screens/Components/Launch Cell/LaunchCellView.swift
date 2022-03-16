@@ -1,10 +1,3 @@
-//
-//  LaunchCellView.swift
-//  SpaceApp
-//
-//  Created by Isabella Bencardino on 15/03/2022.
-//
-
 import UIKit
 
 class LaunchCellView: UITableViewCell {

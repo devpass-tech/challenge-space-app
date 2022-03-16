@@ -4,7 +4,6 @@ class LaunchCellView: UITableViewCell {
 
     private let badgeView: UIImageView = {
         let badgeView = UIImageView()
-        badgeView.image = UIImage(systemName: "location.north.line.fill")
         badgeView.frame = CGRect(x: 0, y: 0, width: 125, height: 125)
         badgeView.contentMode = .scaleAspectFit
         return badgeView
@@ -12,14 +11,12 @@ class LaunchCellView: UITableViewCell {
 
     private let titleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.text = "CRS-20"
         titleLabel.font = .systemFont(ofSize: 24, weight: .semibold)
         return titleLabel
     }()
 
     private let numberLabel: UILabel = {
         let numberLabel = UILabel()
-        numberLabel.text = "#91"
         numberLabel.font = .systemFont(ofSize: 20, weight: .regular)
         numberLabel.textColor = .gray
         return numberLabel
@@ -27,7 +24,6 @@ class LaunchCellView: UITableViewCell {
 
     private let dateLabel: UILabel = {
         let dateLabel = UILabel()
-        dateLabel.text = "July 03, 2020"
         dateLabel.font = .systemFont(ofSize: 20, weight: .regular)
         dateLabel.textColor = .gray
         return dateLabel
@@ -35,7 +31,6 @@ class LaunchCellView: UITableViewCell {
 
     private let statusLabel: UILabel = {
         let statusLabel = UILabel()
-        statusLabel.text = "Sucess"
         statusLabel.font = .systemFont(ofSize: 20, weight: .regular)
         statusLabel.textColor = .gray
         return statusLabel
@@ -48,8 +43,10 @@ class LaunchCellView: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+
         backgroundColor = .backgroundColor
         layer.cornerRadius = 10
+        updateLaunchView()
         setupViews()
         setupStackView()
     }
@@ -59,7 +56,6 @@ class LaunchCellView: UITableViewCell {
     }
 
     private func setupViews() {
-
         addSubview(badgeView)
         addSubview(numberLabel)
 
@@ -68,7 +64,6 @@ class LaunchCellView: UITableViewCell {
 
     private func setupStackView() {
         addSubview(stackView)
-
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(dateLabel)
         stackView.addArrangedSubview(statusLabel)
@@ -81,9 +76,7 @@ class LaunchCellView: UITableViewCell {
     }
 
     private func configureStackViewConstraints() {
-
         stackView.translatesAutoresizingMaskIntoConstraints = false
-
         stackView.topAnchor.constraint(equalTo: topAnchor, constant: 34.5).isActive = true
         stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -34.5).isActive = true
         stackView.leadingAnchor.constraint(equalTo: badgeView.trailingAnchor, constant: 16).isActive = true
@@ -91,7 +84,6 @@ class LaunchCellView: UITableViewCell {
     }
 
     private func configureSubviewsConstraints() {
-
         badgeView.translatesAutoresizingMaskIntoConstraints = false
         badgeView.widthAnchor.constraint(equalToConstant: 125).isActive = true
         badgeView.heightAnchor.constraint(equalToConstant: 125).isActive = true
@@ -103,5 +95,15 @@ class LaunchCellView: UITableViewCell {
         numberLabel.heightAnchor.constraint(equalToConstant: 24).isActive = true
         numberLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24).isActive = true
         numberLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16).isActive = true
+    }
+
+    private func updateLaunchView() {
+        let model = LaunchCellModel(badgeImage: "location.north.line.fill", rocketName: "CRS-20", number: 91, date: "July 03, 2020", status: .success)
+
+        badgeView.image = UIImage(systemName: model.badgeImage)
+        titleLabel.text = model.rocketName
+        numberLabel.text = "#\(model.number)"
+        dateLabel.text = model.date
+        statusLabel.text = model.status.rawValue
     }
 }

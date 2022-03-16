@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EF87F7A27E0E66A00F02C94 /* LaunchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF87F7927E0E66A00F02C94 /* LaunchCellView.swift */; };
 		98B0968427D2A3420038709C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0968327D2A3420038709C /* AppDelegate.swift */; };
 		98B0968627D2A3420038709C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0968527D2A3420038709C /* SceneDelegate.swift */; };
 		98B0968D27D2A3460038709C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B0968C27D2A3460038709C /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5EF87F7927E0E66A00F02C94 /* LaunchCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCellView.swift; sourceTree = "<group>"; };
 		98B0968027D2A3420038709C /* SpaceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B0968327D2A3420038709C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98B0968527D2A3420038709C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EF87F7827E0E62F00F02C94 /* Launch Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5EF87F7927E0E66A00F02C94 /* LaunchCellView.swift */,
+			);
+			path = "Launch Cell";
+			sourceTree = "<group>";
+		};
 		98B0967727D2A3420038709C = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +238,7 @@
 		98B096C827D2B1D70038709C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5EF87F7827E0E62F00F02C94 /* Launch Cell */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -403,6 +414,7 @@
 				98B0968427D2A3420038709C /* AppDelegate.swift in Sources */,
 				98B0968627D2A3420038709C /* SceneDelegate.swift in Sources */,
 				98B096D927D2B1D70038709C /* RocketDetailsView.swift in Sources */,
+				5EF87F7A27E0E66A00F02C94 /* LaunchCellView.swift in Sources */,
 				98B096DF27D2B1D70038709C /* LaunchDetailsViewController.swift in Sources */,
 				98B096D827D2B1D70038709C /* RocketDetailsViewController.swift in Sources */,
 				98B096E127D2B1D70038709C /* FullDescriptionViewController.swift in Sources */,

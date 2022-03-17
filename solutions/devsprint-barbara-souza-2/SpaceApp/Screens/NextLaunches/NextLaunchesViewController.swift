@@ -30,7 +30,7 @@ final class NextLaunchesViewController: UIViewController {
             DispatchQueue.main.async {
 
                 self.nextLaunchesView.updateView(with: NextLaunch(
-                    badge: "cart",
+                    badge: "RocketNextLaunch",
                     name: "Transporter-3",
                     launchNumber: 145,
                     launchDate: "January 13, 2022",

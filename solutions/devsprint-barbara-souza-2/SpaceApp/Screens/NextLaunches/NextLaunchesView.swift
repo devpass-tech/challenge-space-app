@@ -10,14 +10,12 @@ import UIKit
 final class NextLaunchesView: UIView {
     
     private struct Configurations {
-        static let contentInfoStackViewSpacing: CGFloat = 8
-        static let contentBadgeStackViewSpacing: CGFloat = 16
-        static let contentStackViewSpacing: CGFloat = 16
         static let titleLabel: CGFloat = 24
         static let infoLabel: CGFloat = 20
-        static let infoColor: UIColor = UIColor(red: 0.56, green: 0.56, blue: 0.58, alpha: 1.00)
-        static let backgroundCardColor: UIColor = .black
+        static let backgroundCardColor: UIColor? = .backgroundNextLaunchColor
+        static let infoColor: UIColor? = .textLabelColor
         static let cornerRadiusIcon: CGFloat = 10
+        static let cornerRadiusCard: CGFloat = 10
     }
     
     private lazy var upcomingLabel: UILabel = {
@@ -68,45 +66,34 @@ final class NextLaunchesView: UIView {
         return image
     }()
     
-    private lazy var contentInfoStackView: UIStackView = {
+    private lazy var contentLabelStack: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.alignment = .fill
         stackView.distribution = .fill
-        stackView.spacing = Configurations.contentInfoStackViewSpacing
+        stackView.alignment = .fill
         stackView.addArrangedSubview(nameLabel)
         stackView.addArrangedSubview(numberLabel)
         stackView.addArrangedSubview(launchDateLabel)
         return stackView
     }()
     
-    private lazy var contentBadgeStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .horizontal
-        stackView.alignment = .fill
-        stackView.distribution = .fill
-        stackView.spacing = Configurations.contentBadgeStackViewSpacing
-        stackView.addArrangedSubview(launchBadge)
-        stackView.addArrangedSubview(contentInfoStackView)
-        return stackView
+    private lazy var headerCardView: UIView = {
+        let contentView = UIView()
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(launchBadge)
+        contentView.addSubview(contentLabelStack)
+        return contentView
     }()
     
-    private lazy var contentStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.alignment = .fill
-        stackView.distribution = .fill
-        stackView.backgroundColor = Configurations.backgroundCardColor
-        stackView.layer.cornerRadius = 10.0
-        stackView.isLayoutMarginsRelativeArrangement = true
-        stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 18, leading: 16, bottom: 18, trailing: 16)
-        stackView.spacing = Configurations.contentStackViewSpacing
-        stackView.addArrangedSubview(contentBadgeStackView)
-        stackView.addArrangedSubview(launchDescriptionLabel)
-        return stackView
+    private lazy var cardContentView: UIView = {
+        let contentView = UIView()
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(headerCardView)
+        contentView.addSubview(launchDescriptionLabel)
+        contentView.layer.cornerRadius = Configurations.cornerRadiusCard
+        contentView.backgroundColor = .backgroundNextLaunchColor
+        return contentView
     }()
     
     init() {
@@ -125,7 +112,7 @@ private extension NextLaunchesView {
     
     func setupViews() {
         
-        self.backgroundColor = .backgroundColor
+        self.backgroundColor = .black
         
         self.configureSubviews()
         self.configureSubviewsConstraints()
@@ -133,7 +120,7 @@ private extension NextLaunchesView {
     
     func configureSubviews() {
         self.addSubview(upcomingLabel)
-        self.addSubview(contentStackView)
+        self.addSubview(cardContentView)
     }
     
     func configureSubviewsConstraints() {
@@ -142,9 +129,28 @@ private extension NextLaunchesView {
             upcomingLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 19),
             upcomingLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -19),
             
-            contentStackView.topAnchor.constraint(equalTo: upcomingLabel.bottomAnchor, constant: 19),
-            contentStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 19),
-            contentStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -19),
+            cardContentView.topAnchor.constraint(equalTo: upcomingLabel.bottomAnchor, constant: 16),
+            cardContentView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 19),
+            cardContentView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -19),
+            cardContentView.heightAnchor.constraint(equalToConstant: 245),
+            
+            headerCardView.topAnchor.constraint(equalTo: cardContentView.topAnchor, constant: 16),
+            headerCardView.leadingAnchor.constraint(equalTo: cardContentView.leadingAnchor, constant: 16),
+            headerCardView.trailingAnchor.constraint(equalTo: cardContentView.trailingAnchor, constant:  -16),
+            
+            launchBadge.topAnchor.constraint(equalTo: headerCardView.topAnchor),
+            launchBadge.leadingAnchor.constraint(equalTo: headerCardView.leadingAnchor),
+            launchBadge.heightAnchor.constraint(equalToConstant: 125),
+            launchBadge.widthAnchor.constraint(equalToConstant: 125),
+            
+            contentLabelStack.topAnchor.constraint(equalTo: launchBadge.topAnchor, constant: 18.5),
+            contentLabelStack.leadingAnchor.constraint(greaterThanOrEqualTo: launchBadge.trailingAnchor, constant: 16),
+            contentLabelStack.trailingAnchor.constraint(equalTo: headerCardView.trailingAnchor),
+            
+            launchDescriptionLabel.topAnchor.constraint(equalTo: headerCardView.bottomAnchor, constant: 16),
+            launchDescriptionLabel.leadingAnchor.constraint(equalTo: cardContentView.leadingAnchor, constant: 18),
+            launchDescriptionLabel.trailingAnchor.constraint(equalTo: cardContentView.trailingAnchor, constant: -18),
+            launchDescriptionLabel.bottomAnchor.constraint(equalTo: cardContentView.bottomAnchor, constant: -16)
         ])
     }
 }
@@ -156,6 +162,27 @@ extension NextLaunchesView {
         numberLabel.text = "#\(String(nextLaunch.launchNumber))"
         launchDateLabel.text = nextLaunch.launchDate
         launchDescriptionLabel.text = nextLaunch.description
-        launchBadge.image = UIImage(systemName: nextLaunch.badge)
+        launchBadge.image = UIImage(named: nextLaunch.badge)
     }
 }
+
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+struct NextLaunchesViewwPreview: PreviewProvider {
+    static var previews: some View {
+        UIViewPreview {
+            let nextLaunchView = NextLaunchesView()
+            nextLaunchView.updateView(with: NextLaunch(
+                badge: "RocketNextLaunch",
+                name: "RX8",
+                launchNumber: 143,
+                launchDate: "10/10/22",
+                description: "BlaBlablablablabla hehe")
+            )
+            return nextLaunchView
+        }
+    }
+}
+#endif

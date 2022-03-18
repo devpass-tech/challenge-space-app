@@ -8,5 +8,6 @@
 import UIKit
 
 extension UIColor {
-    static var backgroundColor = UIColor(named: "backgroundColor")
+    static var backgroundNextLaunchColor = UIColor(named: "backgroundNextLaunchColor")
+    static var textLabelColor = UIColor(named: "textLabelColor")
 }

@@ -22,12 +22,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.makeKeyAndVisible()
     }
     
-    private func navigationBarConfiguration(_ controller: UINavigationController) {
-        controller.navigationBar.prefersLargeTitles = true
-        controller.navigationBar.tintColor = .white
-        controller.navigationBar.backgroundColor = .backgroundNextLaunchColor
-    }
-    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

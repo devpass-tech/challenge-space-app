@@ -112,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				5EF87F7927E0E66A00F02C94 /* LaunchCellView.swift */,
-				5E09F82C27E257B20085AA53 /* LaunchCellModel.swift */,
 			);
 			path = "Launch Cell";
 			sourceTree = "<group>";
@@ -190,6 +189,7 @@
 		98B096B527D2B1D70038709C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5E09F82C27E257B20085AA53 /* LaunchCellModel.swift */,
 				9A4458BB27DFEF6000802034 /* NextLaunch.swift */,
 			);
 			path = Models;

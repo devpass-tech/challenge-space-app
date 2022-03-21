@@ -45,7 +45,6 @@ class LaunchCellView: UITableViewCell {
 
         backgroundColor = .backgroundNextLaunchColor
         layer.cornerRadius = 10
-        updateLaunchView()
         setupViews()
         setupStackView()
     }
@@ -93,8 +92,7 @@ class LaunchCellView: UITableViewCell {
         numberLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16).isActive = true
     }
 
-    private func updateLaunchView() {
-        let model = LaunchCellModel(badgeImage: "RocketNextLaunch", rocketName: "CRS-20", number: 91, date: "July 03, 2020", status: .success)
+    func updateLaunchView(model: LaunchCellModel) {
 
         badgeView.image = UIImage(named: model.badgeImage)
         titleLabel.text = model.rocketName

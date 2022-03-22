@@ -106,6 +106,14 @@ final class NextLaunchesView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func updateView(with nextLaunch: NextLaunch) {
+        nameLabel.text = nextLaunch.name
+        numberLabel.text = "#\(String(nextLaunch.launchNumber))"
+        launchDateLabel.text = nextLaunch.launchDate
+        launchDescriptionLabel.text = nextLaunch.description
+        launchBadge.image = UIImage(named: nextLaunch.badge)
+    }
 }
 
 private extension NextLaunchesView {
@@ -154,18 +162,6 @@ private extension NextLaunchesView {
         ])
     }
 }
-
-extension NextLaunchesView {
-    
-    func updateView(with nextLaunch: NextLaunch) {
-        nameLabel.text = nextLaunch.name
-        numberLabel.text = "#\(String(nextLaunch.launchNumber))"
-        launchDateLabel.text = nextLaunch.launchDate
-        launchDescriptionLabel.text = nextLaunch.description
-        launchBadge.image = UIImage(named: nextLaunch.badge)
-    }
-}
-
 
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI

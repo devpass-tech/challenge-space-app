@@ -14,14 +14,20 @@ class ButtonView: UIButton {
         setupConstraints()
     }
 
+    var title: String = "See more" {
+        didSet {
+            setTitle(title, for: .normal)
+        }
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupButton() {
+    private func setupButton() {
         backgroundColor = .buttonColor
-                setTitleColor(.white, for: .normal)
-        setTitle("See more", for: .normal) // default title
+        setTitleColor(.white, for: .normal)
+        setTitle(title, for: .normal)
         layer.cornerRadius = 14
         addTarget(self,
                   action: #selector(touchUpInside),
@@ -33,7 +39,7 @@ class ButtonView: UIButton {
         heightAnchor.constraint(equalToConstant: 56).isActive = true
     }
 
-    @objc func touchUpInside() {
+    @objc private func touchUpInside() {
         delegate?.onTap()
     }
 }

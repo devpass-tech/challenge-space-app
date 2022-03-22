@@ -30,6 +30,8 @@
 		98B096E227D2B1D70038709C /* SpaceXService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B096D127D2B1D70038709C /* SpaceXService.swift */; };
 		9A4458BC27DFEF6000802034 /* NextLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4458BB27DFEF6000802034 /* NextLaunch.swift */; };
 		9A72AB0227E1442200142B19 /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72AB0127E1442200142B19 /* UIViewPreview.swift */; };
+		9ABD6FB127E9730C0028F6F0 /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABD6FB027E9730C0028F6F0 /* RocketView.swift */; };
+		9ABD6FB327E9799C0028F6F0 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABD6FB227E9799C0028F6F0 /* Rocket.swift */; };
 		9F7396D927DFF3A600CA5092 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7396D827DFF3A600CA5092 /* Colors.swift */; };
 		9F85EE9327DF978F0007A365 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F85EE9227DF978F0007A365 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,8 @@
 		98B096D127D2B1D70038709C /* SpaceXService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceXService.swift; sourceTree = "<group>"; };
 		9A4458BB27DFEF6000802034 /* NextLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NextLaunch.swift; path = SpaceApp/NextLaunch.swift; sourceTree = SOURCE_ROOT; };
 		9A72AB0127E1442200142B19 /* UIViewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
+		9ABD6FB027E9730C0028F6F0 /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
+		9ABD6FB227E9799C0028F6F0 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		9F7396D827DFF3A600CA5092 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		9F85EE9227DF978F0007A365 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +195,7 @@
 			children = (
 				5E09F82C27E257B20085AA53 /* LaunchCellModel.swift */,
 				9A4458BB27DFEF6000802034 /* NextLaunch.swift */,
+				9ABD6FB227E9799C0028F6F0 /* Rocket.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 		98B096C827D2B1D70038709C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9ABD6FAF27E972FB0028F6F0 /* Rocket View */,
 				5EF87F7827E0E62F00F02C94 /* Launch Cell */,
 			);
 			path = Components;
@@ -276,6 +282,14 @@
 				98B096D127D2B1D70038709C /* SpaceXService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		9ABD6FAF27E972FB0028F6F0 /* Rocket View */ = {
+			isa = PBXGroup;
+			children = (
+				9ABD6FB027E9730C0028F6F0 /* RocketView.swift */,
+			);
+			path = "Rocket View";
 			sourceTree = "<group>";
 		};
 		9F85EE9427DF98F30007A365 /* Colors */ = {
@@ -418,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ABD6FB327E9799C0028F6F0 /* Rocket.swift in Sources */,
 				98B096E227D2B1D70038709C /* SpaceXService.swift in Sources */,
 				9F7396D927DFF3A600CA5092 /* Colors.swift in Sources */,
 				98B0968427D2A3420038709C /* AppDelegate.swift in Sources */,
@@ -428,6 +443,7 @@
 				98B096DF27D2B1D70038709C /* LaunchDetailsViewController.swift in Sources */,
 				98B096D827D2B1D70038709C /* RocketDetailsViewController.swift in Sources */,
 				98B096E127D2B1D70038709C /* FullDescriptionViewController.swift in Sources */,
+				9ABD6FB127E9730C0028F6F0 /* RocketView.swift in Sources */,
 				98B096DA27D2B1D70038709C /* HomeView.swift in Sources */,
 				98B096DC27D2B1D70038709C /* NextLaunchesViewController.swift in Sources */,
 				98B096D327D2B1D70038709C /* DebugViewController.swift in Sources */,

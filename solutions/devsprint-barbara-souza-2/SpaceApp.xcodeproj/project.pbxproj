@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E09F82D27E257B20085AA53 /* LaunchCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09F82C27E257B20085AA53 /* LaunchCellModel.swift */; };
+		5E09FAC627E92D9200015773 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09FAC527E92D9200015773 /* ButtonView.swift */; };
 		5EF87F7A27E0E66A00F02C94 /* LaunchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF87F7927E0E66A00F02C94 /* LaunchCellView.swift */; };
 		98B0968427D2A3420038709C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0968327D2A3420038709C /* AppDelegate.swift */; };
 		98B0968627D2A3420038709C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0968527D2A3420038709C /* SceneDelegate.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		5E09F82C27E257B20085AA53 /* LaunchCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCellModel.swift; sourceTree = "<group>"; };
+		5E09FAC527E92D9200015773 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		5EF87F7927E0E66A00F02C94 /* LaunchCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCellView.swift; sourceTree = "<group>"; };
 		98B0968027D2A3420038709C /* SpaceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B0968327D2A3420038709C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E09FAC727E92D9600015773 /* Button View */ = {
+			isa = PBXGroup;
+			children = (
+				5E09FAC527E92D9200015773 /* ButtonView.swift */,
+			);
+			path = "Button View";
+			sourceTree = "<group>";
+		};
 		5EF87F7827E0E62F00F02C94 /* Launch Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +257,7 @@
 		98B096C827D2B1D70038709C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5E09FAC727E92D9600015773 /* Button View */,
 				5EF87F7827E0E62F00F02C94 /* Launch Cell */,
 			);
 			path = Components;
@@ -420,6 +431,7 @@
 			files = (
 				98B096E227D2B1D70038709C /* SpaceXService.swift in Sources */,
 				9F7396D927DFF3A600CA5092 /* Colors.swift in Sources */,
+				5E09FAC627E92D9200015773 /* ButtonView.swift in Sources */,
 				98B0968427D2A3420038709C /* AppDelegate.swift in Sources */,
 				98B0968627D2A3420038709C /* SceneDelegate.swift in Sources */,
 				98B096D927D2B1D70038709C /* RocketDetailsView.swift in Sources */,

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84780F6127E4E98900ED31BF /* DetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84780F6027E4E98900ED31BF /* DetailsHeaderView.swift */; };
+		849B0B6727EB842600687A18 /* LaunchDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B0B6627EB842600687A18 /* LaunchDetailModel.swift */; };
 		5E09FAC627E92D9200015773 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09FAC527E92D9200015773 /* ButtonView.swift */; };
 		5E09FAC927EA721700015773 /* LaunchCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09FAC827EA721700015773 /* LaunchCellModel.swift */; };
 		8006D76927E269AB0060FE4F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8006D76827E269AB0060FE4F /* Constants.swift */; };
@@ -56,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84780F6027E4E98900ED31BF /* DetailsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeaderView.swift; sourceTree = "<group>"; };
+		849B0B6627EB842600687A18 /* LaunchDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchDetailModel.swift; path = SpaceApp/Screens/LaunchDetails/View/LaunchDetailModel.swift; sourceTree = SOURCE_ROOT; };
 		5E09FAC527E92D9200015773 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		5E09FAC827EA721700015773 /* LaunchCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCellModel.swift; sourceTree = "<group>"; };
 		8006D76827E269AB0060FE4F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -116,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84780F5E27E4E91B00ED31BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84780F6027E4E98900ED31BF /* DetailsHeaderView.swift */,
+			);
+			path = View;
+      sourceTree = "<group>";
+		};
 		5E09FAC727E92D9600015773 /* Button View */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				9A4458BB27DFEF6000802034 /* NextLaunch.swift */,
+				849B0B6627EB842600687A18 /* LaunchDetailModel.swift */,
 				5E09FAC827EA721700015773 /* LaunchCellModel.swift */,
 			);
 			path = Models;
@@ -291,6 +304,7 @@
 		98B096C927D2B1D70038709C /* LaunchDetails */ = {
 			isa = PBXGroup;
 			children = (
+				84780F5E27E4E91B00ED31BF /* View */,
 				98B096CA27D2B1D70038709C /* LaunchDetailsView.swift */,
 				98B096CB27D2B1D70038709C /* LaunchDetailsViewController.swift */,
 			);
@@ -454,7 +468,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84780F6127E4E98900ED31BF /* DetailsHeaderView.swift in Sources */,
 				98B096E227D2B1D70038709C /* SpaceXService.swift in Sources */,
+				849B0B6727EB842600687A18 /* LaunchDetailModel.swift in Sources */,
 				8006D76927E269AB0060FE4F /* Constants.swift in Sources */,
 				9F7396D927DFF3A600CA5092 /* Colors.swift in Sources */,
 				5E09FAC627E92D9200015773 /* ButtonView.swift in Sources */,

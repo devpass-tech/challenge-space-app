@@ -12,15 +12,15 @@ class DetailsHeaderView: UIView {
     lazy var badgeImageView:UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "logo vem aqui")
+        image.image = UIImage(named: "RocketNextLaunch")
         image.contentMode = .scaleAspectFit
         return image
     }()
     
-    lazy var shipNameLabel:UILabel = {
+    lazy var rocketNameLabel:UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        label.textColor = UIColor(named: "titleColor")
         label.font = UIFont.boldSystemFont(ofSize: 30)
         label.text =  "CRS-20"
        return label
@@ -29,7 +29,7 @@ class DetailsHeaderView: UIView {
     lazy var statusLabel:UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor(red: 142/255, green: 142/255, blue: 147/255, alpha: 1.0)
+        label.textColor = UIColor(named: "textLabelColor")
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.text =  "Success"
        return label
@@ -37,9 +37,9 @@ class DetailsHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .black
+        self.backgroundColor = UIColor(named: "backgroundNextLaunchColor")
         self.addSubview(self.badgeImageView)
-        self.addSubview(self.shipNameLabel)
+        self.addSubview(self.rocketNameLabel)
         self.addSubview(self.statusLabel)
         self.setUpConstraints()
     }
@@ -56,11 +56,11 @@ class DetailsHeaderView: UIView {
             self.badgeImageView.heightAnchor.constraint(equalToConstant: 125),
             self.badgeImageView.widthAnchor.constraint(equalToConstant: 125),
 
-            self.shipNameLabel.topAnchor.constraint(equalTo: self.badgeImageView.bottomAnchor, constant: 20),
-            self.shipNameLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.shipNameLabel.heightAnchor.constraint(equalToConstant: 35),
+            self.rocketNameLabel.topAnchor.constraint(equalTo: self.badgeImageView.bottomAnchor, constant: 20),
+            self.rocketNameLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.rocketNameLabel.heightAnchor.constraint(equalToConstant: 35),
             
-            self.statusLabel.topAnchor.constraint(equalTo: self.shipNameLabel.bottomAnchor, constant: 10),
+            self.statusLabel.topAnchor.constraint(equalTo: self.rocketNameLabel.bottomAnchor, constant: 10),
             self.statusLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.statusLabel.heightAnchor.constraint(equalToConstant: 30),
 
@@ -68,5 +68,12 @@ class DetailsHeaderView: UIView {
         ])
         
     }
+    
+    func updateLaunchView(model: LaunchDetailModel) {
 
+        badgeImageView.image = UIImage(named: model.badgeImage)
+        rocketNameLabel.text = model.rocketName
+        statusLabel.text = model.status.rawValue
+        
+    }
 }

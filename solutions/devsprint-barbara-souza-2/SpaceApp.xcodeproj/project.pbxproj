@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84780F6127E4E98900ED31BF /* DetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84780F6027E4E98900ED31BF /* DetailsHeaderView.swift */; };
+		849B0B6727EB842600687A18 /* LaunchDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B0B6627EB842600687A18 /* LaunchDetailModel.swift */; };
 		98B0968427D2A3420038709C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0968327D2A3420038709C /* AppDelegate.swift */; };
 		98B0968627D2A3420038709C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0968527D2A3420038709C /* SceneDelegate.swift */; };
 		98B0968D27D2A3460038709C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B0968C27D2A3460038709C /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		84780F6027E4E98900ED31BF /* DetailsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeaderView.swift; sourceTree = "<group>"; };
+		849B0B6627EB842600687A18 /* LaunchDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchDetailModel.swift; path = SpaceApp/Screens/LaunchDetails/View/LaunchDetailModel.swift; sourceTree = SOURCE_ROOT; };
 		98B0968027D2A3420038709C /* SpaceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B0968327D2A3420038709C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98B0968527D2A3420038709C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				9A4458BB27DFEF6000802034 /* NextLaunch.swift */,
+				849B0B6627EB842600687A18 /* LaunchDetailModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			files = (
 				84780F6127E4E98900ED31BF /* DetailsHeaderView.swift in Sources */,
 				98B096E227D2B1D70038709C /* SpaceXService.swift in Sources */,
+				849B0B6727EB842600687A18 /* LaunchDetailModel.swift in Sources */,
 				9F7396D927DFF3A600CA5092 /* Colors.swift in Sources */,
 				98B0968427D2A3420038709C /* AppDelegate.swift in Sources */,
 				98B0968627D2A3420038709C /* SceneDelegate.swift in Sources */,

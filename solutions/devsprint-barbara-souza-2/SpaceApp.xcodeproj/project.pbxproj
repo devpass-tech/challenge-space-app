@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8006D76927E269AB0060FE4F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8006D76827E269AB0060FE4F /* Constants.swift */; };
+		80344B0827E15E56008650EE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80344B0727E15E56008650EE /* ErrorView.swift */; };
+		80344B0A27E15EA5008650EE /* ErrorViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80344B0927E15EA5008650EE /* ErrorViewEntity.swift */; };
 		5E09F82D27E257B20085AA53 /* LaunchCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09F82C27E257B20085AA53 /* LaunchCellModel.swift */; };
 		5EF87F7A27E0E66A00F02C94 /* LaunchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF87F7927E0E66A00F02C94 /* LaunchCellView.swift */; };
 		98B0968427D2A3420038709C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0968327D2A3420038709C /* AppDelegate.swift */; };
@@ -52,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8006D76827E269AB0060FE4F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		80344B0727E15E56008650EE /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		80344B0927E15EA5008650EE /* ErrorViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewEntity.swift; sourceTree = "<group>"; };
 		5E09F82C27E257B20085AA53 /* LaunchCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCellModel.swift; sourceTree = "<group>"; };
 		5EF87F7927E0E66A00F02C94 /* LaunchCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCellView.swift; sourceTree = "<group>"; };
 		98B0968027D2A3420038709C /* SpaceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +114,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8006D76727E2699A0060FE4F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8006D76827E269AB0060FE4F /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		80344B0627E15E2A008650EE /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				80344B0727E15E56008650EE /* ErrorView.swift */,
+				80344B0927E15EA5008650EE /* ErrorViewEntity.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		5EF87F7827E0E62F00F02C94 /* Launch Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +162,7 @@
 		98B0968227D2A3420038709C /* SpaceApp */ = {
 			isa = PBXGroup;
 			children = (
+				8006D76727E2699A0060FE4F /* Constants */,
 				98B096B427D2B1AB0038709C /* AppDelegate */,
 				98B096B327D2A7170038709C /* Resources */,
 				98B096BE27D2B1D70038709C /* Screens */,
@@ -247,6 +271,7 @@
 		98B096C827D2B1D70038709C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				80344B0627E15E2A008650EE /* Error */,
 				5EF87F7827E0E62F00F02C94 /* Launch Cell */,
 			);
 			path = Components;
@@ -419,8 +444,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B096E227D2B1D70038709C /* SpaceXService.swift in Sources */,
+				8006D76927E269AB0060FE4F /* Constants.swift in Sources */,
 				9F7396D927DFF3A600CA5092 /* Colors.swift in Sources */,
 				98B0968427D2A3420038709C /* AppDelegate.swift in Sources */,
+				80344B0A27E15EA5008650EE /* ErrorViewEntity.swift in Sources */,
 				98B0968627D2A3420038709C /* SceneDelegate.swift in Sources */,
 				98B096D927D2B1D70038709C /* RocketDetailsView.swift in Sources */,
 				5E09F82D27E257B20085AA53 /* LaunchCellModel.swift in Sources */,
@@ -431,6 +458,7 @@
 				98B096DA27D2B1D70038709C /* HomeView.swift in Sources */,
 				98B096DC27D2B1D70038709C /* NextLaunchesViewController.swift in Sources */,
 				98B096D327D2B1D70038709C /* DebugViewController.swift in Sources */,
+				80344B0827E15E56008650EE /* ErrorView.swift in Sources */,
 				98B096DD27D2B1D70038709C /* NextLaunchesView.swift in Sources */,
 				98B096DE27D2B1D70038709C /* LaunchDetailsView.swift in Sources */,
 				9A72AB0227E1442200142B19 /* UIViewPreview.swift in Sources */,
@@ -772,4 +800,5 @@
 /* End XCConfigurationList section */
 	};
 	rootObject = 98B0967827D2A3420038709C /* Project object */;
+	
 }

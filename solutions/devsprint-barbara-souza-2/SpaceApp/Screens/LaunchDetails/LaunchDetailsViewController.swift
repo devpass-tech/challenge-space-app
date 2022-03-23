@@ -10,6 +10,6 @@ import UIKit
 class LaunchDetailsViewController: UIViewController {
 
     override func loadView() {
-        self.view = LaunchDetailsView()
+        self.view = RocketView()
     }
 }

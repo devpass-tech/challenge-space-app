@@ -8,7 +8,13 @@
 import Foundation
 import UIKit
 
+protocol RocketViewDelegate: AnyObject {
+    func onButtonTap()
+}
+
 final class RocketView: UIView {
+    
+    weak var delegate: RocketViewDelegate?
     
     private struct Configurations {
         static let mainTextColor: UIColor? = .textLabelColor
@@ -44,12 +50,10 @@ final class RocketView: UIView {
         return label
     }()
     
-    private lazy var buttonView: UIButton = {
-        let button = UIButton()
+    private lazy var buttonView: ButtonView = {
+        let button = ButtonView()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("See more", for: .normal)
-        button.backgroundColor = .blue
-        button.layer.cornerRadius = Configurations.buttonCornerRadius
+        button.delegate = self
         return button
     }()
     
@@ -102,9 +106,13 @@ extension RocketView {
             stackContentView.centerXAnchor.constraint(equalTo: centerXAnchor),
             stackContentView.centerYAnchor.constraint(equalTo: centerYAnchor),
             stackContentView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35.5),
-            stackContentView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35.5),
-            
-            buttonView.heightAnchor.constraint(equalToConstant: 56)
+            stackContentView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35.5)
         ])
+    }
+}
+
+extension RocketView: ButtonViewDelegate {
+    func onTap() {
+        delegate?.onButtonTap()
     }
 }

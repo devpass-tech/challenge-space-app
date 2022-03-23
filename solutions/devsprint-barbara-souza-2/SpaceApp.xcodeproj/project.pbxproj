@@ -129,6 +129,8 @@
 				80344B0927E15EA5008650EE /* ErrorViewEntity.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
 		5EF87F7827E0E62F00F02C94 /* Launch Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -798,4 +800,5 @@
 /* End XCConfigurationList section */
 	};
 	rootObject = 98B0967827D2A3420038709C /* Project object */;
+	
 }

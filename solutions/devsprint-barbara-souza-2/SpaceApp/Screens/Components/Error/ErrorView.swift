@@ -25,7 +25,6 @@ class ErrorView: UIView {
     
     private lazy var titleLabel: UILabel = {
         let variable = UILabel()
-        variable.textColor = .white
         variable.font = .systemFont(ofSize: Spacing.large, weight: .semibold)
         variable.textAlignment = .center
         variable.translatesAutoresizingMaskIntoConstraints = false
@@ -34,7 +33,7 @@ class ErrorView: UIView {
     
     private lazy var subtitleLabel: UILabel = {
         let variable = UILabel()
-        variable.textColor = UIColor(named: "primaryFontColor")
+        variable.textColor = .textLabelColor
         variable.numberOfLines = viewConfig.subtitleLines
         variable.textAlignment = .center
         variable.font = .systemFont(ofSize: Spacing.mediumToLarge, weight: .regular)

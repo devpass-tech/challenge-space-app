@@ -74,7 +74,7 @@ final class NextLaunchesView: UIView {
         stackView.alignment = .fill
         stackView.addArrangedSubview(nameLabel)
         stackView.addArrangedSubview(numberLabel)
-//        stackView.addArrangedSubview(launchDateLabel)
+        stackView.addArrangedSubview(launchDateLabel)
         return stackView
     }()
     
@@ -110,8 +110,9 @@ final class NextLaunchesView: UIView {
     func updateView(with nextLaunch: NextLaunch) {
         nameLabel.text = nextLaunch.name
         numberLabel.text = "#\(String(nextLaunch.launchNumber))"
-        launchDescriptionLabel.text = nextLaunch.details ?? ""
-        launchBadge.load(urlString: nextLaunch.links.patch.small)
+        launchDateLabel.text = nextLaunch.launchDate
+        launchDescriptionLabel.text = nextLaunch.description
+        launchBadge.image = UIImage(named: nextLaunch.badge)
     }
 }
 
@@ -151,8 +152,8 @@ private extension NextLaunchesView {
             launchBadge.widthAnchor.constraint(equalToConstant: 125),
             
             contentLabelStack.topAnchor.constraint(equalTo: launchBadge.topAnchor, constant: 18.5),
-            contentLabelStack.leadingAnchor.constraint(equalTo: launchBadge.trailingAnchor, constant: 16),
-            contentLabelStack.trailingAnchor.constraint(lessThanOrEqualTo: headerCardView.trailingAnchor),
+            contentLabelStack.leadingAnchor.constraint(greaterThanOrEqualTo: launchBadge.trailingAnchor, constant: 16),
+            contentLabelStack.trailingAnchor.constraint(equalTo: headerCardView.trailingAnchor),
             
             launchDescriptionLabel.topAnchor.constraint(equalTo: headerCardView.bottomAnchor, constant: 16),
             launchDescriptionLabel.leadingAnchor.constraint(equalTo: cardContentView.leadingAnchor, constant: 18),
@@ -162,3 +163,22 @@ private extension NextLaunchesView {
     }
 }
 
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+struct NextLaunchesViewwPreview: PreviewProvider {
+    static var previews: some View {
+        UIViewPreview {
+            let nextLaunchView = NextLaunchesView()
+            nextLaunchView.updateView(with: NextLaunch(
+                badge: "RocketNextLaunch",
+                name: "RX8",
+                launchNumber: 143,
+                launchDate: "10/10/22",
+                description: "BlaBlablablablabla hehe")
+            )
+            return nextLaunchView
+        }
+    }
+}
+#endif

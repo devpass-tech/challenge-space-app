@@ -6,11 +6,27 @@
 //
 
 import Foundation
+import UIKit
 
 struct NextLaunch: Codable {
-    var badge: String
-    var name: String
-    var launchNumber: Int
-    var launchDate: String
-    var description: String
+    let name: String
+    let links: Links
+    let launchNumber: Int
+    let details: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case links
+        case details
+        case launchNumber = "flight_number"
+    }
+    
+    struct Links: Codable {
+        let patch: Patch
+        
+        struct Patch: Codable {
+            let small: String
+            let large: String
+        }
+    }
 }

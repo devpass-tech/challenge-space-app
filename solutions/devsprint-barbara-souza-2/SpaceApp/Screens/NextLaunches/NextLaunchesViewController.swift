@@ -32,19 +32,22 @@ final class NextLaunchesViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        service.fetchNextLaunches { launches in
-            
-            DispatchQueue.main.async {
-                
-                self.nextLaunchesView.updateView(with: NextLaunch(
-                    badge: "RocketNextLaunch",
-                    name: "Transporter-3",
-                    launchNumber: 145,
-                    launchDate: "January 13, 2022",
-                    description: "SpaceX's 20th and final Crew Resupply Mission under the original NASA CRS contract, this mission is very importante for the humanity to discover the baldness cure! muito mais texto cansei de escrever em ingles ai ai"
-                )
-                )
+        var url: URL? = URL(string: "https://api.spacexdata.com/v5/launches")
+        url?.appendPathComponent("next")
+        guard let url = url else { return }
+        service.performRequest(url: url, httpMethod: .get) { response in
+            switch response {
+            case let .result(data):
+                let jsonDecoder = JSONDecoder()
+                do {
+                    let response = try jsonDecoder.decode(NextLaunch.self, from: data)
+                    DispatchQueue.main.async {
+                        self.nextLaunchesView.updateView(with: response)
+                    }
+                } catch {
+                    print(error)
+                }
+            case .error(_): break
             }
         }
         

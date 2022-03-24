@@ -32,6 +32,7 @@
 		98B096E027D2B1D70038709C /* FullDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B096CE27D2B1D70038709C /* FullDescriptionView.swift */; };
 		98B096E127D2B1D70038709C /* FullDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B096CF27D2B1D70038709C /* FullDescriptionViewController.swift */; };
 		98B096E227D2B1D70038709C /* SpaceXService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B096D127D2B1D70038709C /* SpaceXService.swift */; };
+		9A2AA80327EADAA30013D5CF /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AA80227EADAA30013D5CF /* UIImageView.swift */; };
 		9A4458BC27DFEF6000802034 /* NextLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4458BB27DFEF6000802034 /* NextLaunch.swift */; };
 		9A72AB0227E1442200142B19 /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A72AB0127E1442200142B19 /* UIViewPreview.swift */; };
 		9ABD6FB127E9730C0028F6F0 /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABD6FB027E9730C0028F6F0 /* RocketView.swift */; };
@@ -87,6 +88,7 @@
 		98B096CE27D2B1D70038709C /* FullDescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullDescriptionView.swift; sourceTree = "<group>"; };
 		98B096CF27D2B1D70038709C /* FullDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullDescriptionViewController.swift; sourceTree = "<group>"; };
 		98B096D127D2B1D70038709C /* SpaceXService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceXService.swift; sourceTree = "<group>"; };
+		9A2AA80227EADAA30013D5CF /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		9A4458BB27DFEF6000802034 /* NextLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NextLaunch.swift; path = SpaceApp/NextLaunch.swift; sourceTree = SOURCE_ROOT; };
 		9A72AB0127E1442200142B19 /* UIViewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
 		9ABD6FB027E9730C0028F6F0 /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		98B096B327D2A7170038709C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9A2AA80127EADA930013D5CF /* Extensions */,
 				9F85EE9427DF98F30007A365 /* Colors */,
 				98B0968C27D2A3460038709C /* Assets.xcassets */,
 				98B0968E27D2A3460038709C /* LaunchScreen.storyboard */,
@@ -318,6 +321,14 @@
 				98B096D127D2B1D70038709C /* SpaceXService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		9A2AA80127EADA930013D5CF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A2AA80227EADAA30013D5CF /* UIImageView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9ABD6FAF27E972FB0028F6F0 /* Rocket View */ = {
@@ -477,6 +488,7 @@
 				80344B0A27E15EA5008650EE /* ErrorViewEntity.swift in Sources */,
 				98B0968627D2A3420038709C /* SceneDelegate.swift in Sources */,
 				98B096D927D2B1D70038709C /* RocketDetailsView.swift in Sources */,
+				9A2AA80327EADAA30013D5CF /* UIImageView.swift in Sources */,
 				5E09F82D27E257B20085AA53 /* LaunchCellModel.swift in Sources */,
 				5EF87F7A27E0E66A00F02C94 /* LaunchCellView.swift in Sources */,
 				98B096DF27D2B1D70038709C /* LaunchDetailsViewController.swift in Sources */,

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E09FAC627E92D9200015773 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09FAC527E92D9200015773 /* ButtonView.swift */; };
-		5E09FAC927EA721700015773 /* LaunchCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09FAC827EA721700015773 /* LaunchCellModel.swift */; };
 		5EF87F7A27E0E66A00F02C94 /* LaunchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF87F7927E0E66A00F02C94 /* LaunchCellView.swift */; };
 		8006D76927E269AB0060FE4F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8006D76827E269AB0060FE4F /* Constants.swift */; };
 		80344B0827E15E56008650EE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80344B0727E15E56008650EE /* ErrorView.swift */; };
@@ -59,7 +58,6 @@
 
 /* Begin PBXFileReference section */
 		5E09FAC527E92D9200015773 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
-		5E09FAC827EA721700015773 /* LaunchCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCellModel.swift; sourceTree = "<group>"; };
 		5EF87F7927E0E66A00F02C94 /* LaunchCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCellView.swift; sourceTree = "<group>"; };
 		8006D76827E269AB0060FE4F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		80344B0727E15E56008650EE /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -229,7 +227,6 @@
 			children = (
 				9A4458BB27DFEF6000802034 /* NextLaunch.swift */,
 				9ABD6FB227E9799C0028F6F0 /* Rocket.swift */,
-				5E09FAC827EA721700015773 /* LaunchCellModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -489,7 +486,6 @@
 				98B096DD27D2B1D70038709C /* NextLaunchesView.swift in Sources */,
 				98B096DE27D2B1D70038709C /* LaunchDetailsView.swift in Sources */,
 				9A72AB0227E1442200142B19 /* UIViewPreview.swift in Sources */,
-				5E09FAC927EA721700015773 /* LaunchCellModel.swift in Sources */,
 				98B096DB27D2B1D70038709C /* HomeViewController.swift in Sources */,
 				9A4458BC27DFEF6000802034 /* NextLaunch.swift in Sources */,
 				98B096E027D2B1D70038709C /* FullDescriptionView.swift in Sources */,

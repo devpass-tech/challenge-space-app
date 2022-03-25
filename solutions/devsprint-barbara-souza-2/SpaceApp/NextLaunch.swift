@@ -46,4 +46,3 @@ struct NextLaunch: Decodable {
         badge = try patchContainer.decode(String.self, forKey: .small)
     }
 }
-

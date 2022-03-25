@@ -2,6 +2,8 @@ import UIKit
 
 class LaunchCellView: UITableViewCell {
 
+    private let service = SpaceXService()
+
     private let badgeView: UIImageView = {
         let badgeView = UIImageView()
         badgeView.contentMode = .scaleAspectFit
@@ -92,12 +94,12 @@ class LaunchCellView: UITableViewCell {
         numberLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16).isActive = true
     }
 
-    func updateLaunchView(model: LaunchCellModel) {
+    func updateLaunchView(model: NextLaunch) {
 
-        badgeView.image = UIImage(named: model.badgeImage)
-        titleLabel.text = model.rocketName
-        numberLabel.text = "#\(model.number)"
-        dateLabel.text = model.date
-        statusLabel.text = model.status.rawValue
+        badgeView.image = UIImage(named: model.badge)
+        titleLabel.text = model.name
+        numberLabel.text = "#\(model.launchNumber)"
+        //dateLabel.text = model.date
+        statusLabel.text = String(model.success)
     }
 }

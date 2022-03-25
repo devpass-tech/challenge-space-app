@@ -32,22 +32,14 @@ final class NextLaunchesViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+
         service.fetchNextLaunches { launches in
             
             DispatchQueue.main.async {
-                
-                self.nextLaunchesView.updateView(with: NextLaunch(
-                    badge: "RocketNextLaunch",
-                    name: "Transporter-3",
-                    launchNumber: 145,
-                    launchDate: "January 13, 2022",
-                    description: "SpaceX's 20th and final Crew Resupply Mission under the original NASA CRS contract, this mission is very importante for the humanity to discover the baldness cure! muito mais texto cansei de escrever em ingles ai ai"
-                )
-                )
+
+                self.nextLaunchesView.updateView(with: launches.first!)
             }
         }
-        
     }
     
     override func loadView() {

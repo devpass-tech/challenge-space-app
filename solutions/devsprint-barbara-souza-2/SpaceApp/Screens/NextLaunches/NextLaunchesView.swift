@@ -110,7 +110,7 @@ final class NextLaunchesView: UIView {
     func updateView(with nextLaunch: NextLaunch) {
         nameLabel.text = nextLaunch.name
         numberLabel.text = "#\(String(nextLaunch.launchNumber))"
-        launchDateLabel.text = nextLaunch.launchDate
+       // launchDateLabel.text = nextLaunch.launchDate
         launchDescriptionLabel.text = nextLaunch.description
         launchBadge.image = UIImage(named: nextLaunch.badge)
     }
@@ -170,13 +170,13 @@ struct NextLaunchesViewwPreview: PreviewProvider {
     static var previews: some View {
         UIViewPreview {
             let nextLaunchView = NextLaunchesView()
-            nextLaunchView.updateView(with: NextLaunch(
-                badge: "RocketNextLaunch",
-                name: "RX8",
-                launchNumber: 143,
-                launchDate: "10/10/22",
-                description: "BlaBlablablablabla hehe")
-            )
+//            nextLaunchView.updateView(with: NextLaunch(
+//                badge: "RocketNextLaunch",
+//                name: "RX8",
+//                launchNumber: 143,
+//                //launchDate: "10/10/22",
+//                description: "BlaBlablablablabla hehe")
+//            )
             return nextLaunchView
         }
     }
